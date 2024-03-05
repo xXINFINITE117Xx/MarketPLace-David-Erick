@@ -1,19 +1,25 @@
-function toggleMenu() {
-    const contentDiv = document.getElementById('content');
-    const selectedOption = prompt('Elige una opción: categories, home o contact');
-
-    switch (selectedOption.toLowerCase()) {
-      case 'categories':
-        contentDiv.innerHTML = '<h1>Contenido de Categories</h1>';
-        break;
-      case 'home':
-        contentDiv.innerHTML = '<h1>Contenido de Home</h1>';
-        break;
-      case 'contact':
-        contentDiv.innerHTML = '<h1>Contenido de Contact</h1>';
-        break;
-      default:
-        alert('Opción no válida');
-        break;
-    }
+document.addEventListener('DOMContentLoaded', function () {
+    const menuHamburguer = document.querySelector('.menu-hamburguer');
+    const overlay = document.getElementById('overlay');
+  
+    menuHamburguer.addEventListener('click', function () {
+      if (overlay.style.display === 'block') {
+        overlay.style.display = 'none';
+      } else {
+        overlay.style.display = 'block';
+      }
+    });
+  });
+  
+  function changePage(page) {
+    alert(`Redirecting to ${page} page`);
+    // Puedes redirigir a la página correspondiente o realizar cualquier otra acción aquí
+    closeMenu();
   }
+  
+  function closeMenu() {
+    const overlay = document.getElementById('overlay');
+    overlay.style.display = 'none';
+  }
+  
+  
