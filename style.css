@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 90%;
+    height: auto;
+    padding: 5%;
+    background-color: #1E8AD9;
+}
+
+header{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo{
+    width: 5rem;
+}
+.navbar{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0 1rem 0;
+
+}
+.container_input {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .input_search {
+    width: 7.5rem;
+    height: 1.5rem;
+    padding: 10px;
+    border-radius: 50px;
+    border: none;
+    background-color: #86C4F3;
+    outline: none;
+
+  }
+
+  .input_search:focus{
+    border:2px solid #F16D1C ;
+    padding-left: 2.5rem;
+    color: white;
+  }
+
+  .input_search:not(:focus){
+    color: white;
+    padding-left: 2.5rem;
+
+  }
+  
+  .icon_lupa{
+    width: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+  }
+  
+  .icon_user, .icon_shopping_cart{
+    width:2.8rem;
+    height: auto;
+  }
