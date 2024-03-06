@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
     const menuHamburguer = document.querySelector('.menu-hamburguer');
-    const overlay = document.getElementById('overlay');
+    const menu = document.querySelector('.menu');
   
     menuHamburguer.addEventListener('click', function () {
-      if (overlay.style.display === 'block') {
-        overlay.style.display = 'none';
+      if (menu.style.display === 'block') {
+        menu.style.display = 'none';
       } else {
-        overlay.style.display = 'block';
+        menu.style.display = 'block';
       }
     });
   });
@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   
   function closeMenu() {
-    const overlay = document.getElementById('overlay');
-    overlay.style.display = 'none';
+    const menu = document.querySelector('.menu');
+    menu.style.display = 'none';
   }
   
   
