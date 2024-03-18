@@ -43,10 +43,16 @@ function createProductCard(productData) {
   img.alt = productData.title;
   container.appendChild(img);
 
+  const container_tittle = document.createElement('div');
+  container_tittle.classList.add('container_tittle');
+
   const title = document.createElement('h2');
   title.classList.add('titles');
   title.textContent = productData.title;
-  container.appendChild(title);
+  container_tittle.appendChild(title);
+
+  container.appendChild(container_tittle);
+
   const cardsContainer = document.querySelector('.container-cards');
   cardsContainer.appendChild(container);
 }
