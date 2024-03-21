@@ -244,3 +244,51 @@ footer {
   height: auto;
   margin-top: 0.4rem;
 }
+
+.modal{
+  width: 20rem;
+  height: auto;
+  z-index: 4;
+  background-color: #025373ef;
+  border-radius: 3rem;
+  opacity: 98%;
+  color: #D9D8D7;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+}
+
+.image{
+  width: 10rem;
+  height: auto;
+}
+
+.description{
+  font-size: 20px;
+  margin-bottom: 1rem;
+}
+
+.close{
+  width: auto;
+  height: auto;
+  font-size: 25px;
+  border-style: none;
+  background-color: #0e6caf00;
+  position: relative;
+  left: 40%;
+}
+
+.price{
+  position: absolute;
+  top: 35%;
+  left: 73%;
+  font-size: 26px;
+  color: #F16D1C;
+}

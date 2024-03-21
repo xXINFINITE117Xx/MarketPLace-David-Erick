@@ -35,12 +35,12 @@ function getAPI() {
 getAPI();
 
 function createProductCard(productData) {
-  const container = document.createElement('div');
+  const container = document.createElement('button');
   container.classList.add('container_product');
 
   const img = document.createElement('img');
-  img.src = productData.image;
-  img.alt = productData.title;
+    img.src = productData.image;
+    img.alt = productData.title;
   container.appendChild(img);
 
   const container_tittle = document.createElement('div');
@@ -55,6 +55,29 @@ function createProductCard(productData) {
 
   const cardsContainer = document.querySelector('.container-cards');
   cardsContainer.appendChild(container);
+
+  container.addEventListener("click",showModal)
+  const modal=document.querySelector(".modal")
+
+  function showModal() {
+    modal.style.display="flex"
+    const close=document.querySelector(".close")
+    close.addEventListener("click",closeModal)
+    const tittle=document.querySelector(".title")
+    tittle.textContent=productData.title;
+    const img=document.querySelector(".image")
+    img.src = productData.image;
+    img.alt = productData.title;
+    const description=document.querySelector(".description")
+    description.textContent=productData.description;
+    const price=document.querySelector(".price")
+    price.textContent="$"+productData.price;
+  }
+  
+
+  function closeModal() {
+    modal.style.display="none"
+  }
 }
 
 
