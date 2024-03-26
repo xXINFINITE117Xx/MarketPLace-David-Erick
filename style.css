@@ -33,6 +33,7 @@ main{
 
 .logo {
   width: 5rem;
+  cursor: pointer;
 }
 
 .navbar {
@@ -324,4 +325,36 @@ footer {
   color: #fff;
   padding: 1rem;
   border-radius: 25px;
+}
+
+footer {
+  position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.container-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.container-icons a {
+  margin: 0 10px;
+}
+
+.separator2 {
+  position: fixed;
+    left: 0;
+    top: 53rem;
+    transform: translateX(0%);
+    width: 100%;
+    height: auto;
+}
+
+.fixed-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
