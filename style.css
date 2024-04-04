@@ -333,6 +333,7 @@ footer {
     bottom: 0;
     width: 100%;
     padding: 10px 0;
+    z-index: 3;
 }
 
 .container-icons {
@@ -351,6 +352,9 @@ footer {
     transform: translateX(0%);
     width: 100%;
     height: auto;
+    z-index: 3;
+    background-color: #1E8AD9;
+
 }
 
 .fixed-footer {
