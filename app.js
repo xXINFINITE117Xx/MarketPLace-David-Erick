@@ -58,8 +58,27 @@ function createProductCard(productData) {
     category.textContent = productData.category;
     const price = document.querySelector(".price");
     price.textContent = "$" + productData.price;
+
+    /*Add cart*/
+    const addProduct = document.createElement("button");
+    addProduct.textContent = "Add to the cart";
+    addProduct.id = "add_to_cart";
+    addProduct.addEventListener("click", () => {
+      const ExistingProduct = shoppingCart.find(item => item.id === product.id);
+
+      if (ExistingProduct) {
+        Swal.fire ("This product has already been added to the cart")
+        return;
+      }
+
+      const productwithQuality = {...product, quantity: 0};
+
+      shoppingCart = [...shoppingCart, ...productwithQuality]
+
+      localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
+    });
   }
-  
+
   function closeModal() {
     modal.style.display = "none";
   }
@@ -119,8 +138,10 @@ women.addEventListener("click", () => {
 });
 
 // Función para fijar el footer y la imagen .separator2 al hacer clic en el botón
-document.getElementById('stopMoving').addEventListener('click', function(event) {
-  event.preventDefault(); // Evita que el enlace recargue la página
-  document.querySelector('footer').classList.add('fixed-footer');
-  document.querySelector('.separator2').classList.add('fixed-footer');
-});
+document
+  .getElementById("stopMoving")
+  .addEventListener("click", function (event) {
+    event.preventDefault(); // Evita que el enlace recargue la página
+    document.querySelector("footer").classList.add("fixed-footer");
+    document.querySelector(".separator2").classList.add("fixed-footer");
+  });

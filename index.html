@@ -1,89 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="style_modal.css">
-  <script src="
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style_modal.css" />
+    <script src="
   https://cdn.jsdelivr.net/npm/sweetalert2@11.10.7/dist/sweetalert2.all.min.js
   "></script>
-  <link href="
+    <link
+      href="
   https://cdn.jsdelivr.net/npm/sweetalert2@11.10.7/dist/sweetalert2.min.css
-  " rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-  <title>Gaming Galaxy</title>
-</head>
+  "
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Gaming Galaxy</title>
+  </head>
 
-<body>
-  <header>
-    <img class="logo" src="img/logo.png" alt="" onclick="reloadWebsite()"/>
-    <div class="navbar">
-      <div class="menu-hamburguer">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-     
+  <body>
+    <header>
+      <img class="logo" src="img/logo.png" alt="" onclick="reloadWebsite()" />
+      <div class="navbar">
+        <div class="menu-hamburguer">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
         <div class="menu">
           <a href="#" onclick="changePage('home')">Home</a>
           <a href="#" onclick="changePage('categories')">Categories</a>
           <a href="#" onclick="changePage('contact')">Contact</a>
         </div>
-      
-      <div class="container_input">
-        <img class="icon_lupa" src="img/icon_lupa.png" alt="image-lupa">
-        <input class="input_search" type="text" placeholder=" ">
+
+        <div class="container_input">
+          <img class="icon_lupa" src="img/icon_lupa.png" alt="image-lupa" />
+          <input class="input_search" type="text" placeholder=" " />
+        </div>
+        <a href="">
+          <img class="icon_user" src="img/icon_user.png" alt="image-login" />
+        </a>
+        <a href="">
+          <img
+            class="icon_shopping_cart"
+            src="img/icon_shopping_cart.png"
+            alt="shop-little-car"
+          />
+        </a>
       </div>
-      <a href="">
-        <img class="icon_user" src="img/icon_user.png" alt="image-login">
-      </a>
-      <a href="">
-        <img class="icon_shopping_cart" src="img/icon_shopping_cart.png" alt="shop-little-car">
-      </a>
-    </div>
-  </header>
-  <main>
-    <div class="container_category">
-      <img class="separator" src="img/separator.png" alt="">
-      <h1>Gaming Galaxy </h1>
-      <img class="separator" src="img/separator.png" alt="">
-      <div class="container-buttons">
-        <button class="Electronics">Electronics</button>
-        <button class="Jewerely">Jewerely</button>
-        <button class="Mens">Mens</button>
-        <button class="Women">Women</button>
+    </header>
+    <main>
+      <div class="container_category">
+        <img class="separator" src="img/separator.png" alt="" />
+        <h1>Gaming Galaxy</h1>
+        <img class="separator" src="img/separator.png" alt="" />
+        <div class="container-buttons">
+          <button class="Electronics">Electronics</button>
+          <button class="Jewerely">Jewerely</button>
+          <button class="Mens">Mens</button>
+          <button class="Women">Women</button>
+        </div>
       </div>
-    </div>
-    <div class="container-cards">
-      
-    </div>
-    <div class="modal">
-      <button class="close">X</button>
-      <h2 class="title"></h2>
-      <img class="image" src=" " alt="">
-      <h3 class="category"></h3>
-      <h3 class="price"></h3>
-      <p class="description"></p>
-      <button class="add_to_cart">Add to cart</button>
-    </div>
-  </main>
-  <img class="separator2" src="img/separator.png" alt="">
-<footer>
-  <div class="container-icons">
-    <a href="#" id="stopMoving">
-      <img src="img/icon_whatsapp.png" alt="">
-    </a>
-    <a href="#">
-      <img src="img/icon_facebook.png" alt="">
-    </a>
-    <a href="#">
-      <img src="img/icon_instagram.png" alt="">
-    </a>
-  </div>
-</footer>
-</body>
- <script src="app.js"></script>
+      <div class="container-cards"></div>
+      <div class="modal">
+        <button class="close">X</button>
+        <h2 class="title"></h2>
+        <img class="image" src=" " alt="" />
+        <h3 class="category"></h3>
+        <h3 class="price"></h3>
+        <p class="description"></p>
+        <button class="add_to_cart">Add to cart</button>
+      </div>
+    </main>
+    <img class="separator2" src="img/separator.png" alt="" />
+    <footer>
+      <div class="container-icons">
+        <a href="#" id="stopMoving">
+          <img src="img/icon_whatsapp.png" alt="" />
+        </a>
+        <a href="#">
+          <img src="img/icon_facebook.png" alt="" />
+        </a>
+        <a href="#">
+          <img src="img/icon_instagram.png" alt="" />
+        </a>
+      </div>
+    </footer>
+  </body>
+  <script src="app.js"></script>
 </html>
