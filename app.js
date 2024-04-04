@@ -54,10 +54,12 @@ function createProductCard(productData) {
     img.alt = productData.title;
     const description = document.querySelector(".description");
     description.textContent = productData.description;
+    const category = document.querySelector(".category");
+    category.textContent = productData.category;
     const price = document.querySelector(".price");
     price.textContent = "$" + productData.price;
   }
-
+  
   function closeModal() {
     modal.style.display = "none";
   }
