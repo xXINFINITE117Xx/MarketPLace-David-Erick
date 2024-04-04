@@ -12,7 +12,7 @@
 
 <body>
   <header>
-    <img class="logo" src="img/logo.png" alt="" />
+    <img class="logo" src="img/logo.png" alt="" onclick="reloadWebsite()"/>
     <div class="navbar">
       <div class="menu-hamburguer">
         <span></span>
@@ -39,40 +39,43 @@
     </div>
   </header>
   <main>
-    <img class="separator" src="img/separator.png" alt="">
-    <h1>Gaming Galaxy </h1>
-    <img class="separator" src="img/separator.png" alt="">
-    <div class="container-buttons">
-      <button>Electronics</button>
-      <button>Jewerely</button>
-      <button>Mens</button>
-      <button>Women</button>
+    <div class="container_category">
+      <img class="separator" src="img/separator.png" alt="">
+      <h1>Gaming Galaxy </h1>
+      <img class="separator" src="img/separator.png" alt="">
+      <div class="container-buttons">
+        <button class="Electronics">Electronics</button>
+        <button class="Jewerely">Jewerely</button>
+        <button class="Mens">Mens</button>
+        <button class="Women">Women</button>
+      </div>
     </div>
     <div class="container-cards">
       
     </div>
     <div class="modal">
       <button class="close">X</button>
-      <h2 class="title">MODAL</h2>
+      <h2 class="title"></h2>
       <img class="image" src=" " alt="">
-      <p class="description"></p>
       <h3 class="price"></h3>
+      <p class="description"></p>
+      <button class="add_to_cart">Add to cart</button>
     </div>
-    <img class="separator" src="img/separator.png" alt="">
   </main>
-  <footer>
-    <div class="container-icons">
-      <a href="">
-        <img src="img/icon_whatsapp.png" alt="">
-      </a>
-      <a href="">
-        <img src="img/icon_facebook.png" alt="">
-      </a>
-      <a href="">
-        <img src="img/icon_instagram.png" alt="">
-      </a>
-    </div>
-  </footer>
+  <img class="separator2" src="img/separator.png" alt="">
+<footer>
+  <div class="container-icons">
+    <a href="#" id="stopMoving">
+      <img src="img/icon_whatsapp.png" alt="">
+    </a>
+    <a href="#">
+      <img src="img/icon_facebook.png" alt="">
+    </a>
+    <a href="#">
+      <img src="img/icon_instagram.png" alt="">
+    </a>
+  </div>
+</footer>
 </body>
  <script src="app.js"></script>
 </html>
