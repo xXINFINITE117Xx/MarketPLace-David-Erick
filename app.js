@@ -5,7 +5,7 @@ const jewerely = document.querySelector(".Jewerely");
 const mens = document.querySelector(".Mens");
 const women = document.querySelector(".Women");
 let category = " ";
-let shoppingCart=[];
+let shoppingCart=localStorage.getItem("shoppingCart") ? JSON.parse(localStorage.getItem("shoppingCart")) : [];
 function reloadWebsite() {
   location.reload();
 }
@@ -70,7 +70,7 @@ function createProductCard(productData) {
         return; 
       }
 
-      const productwithQuality = {...productData, quantity: 0};
+      const productwithQuality = {...productData, number_amount: 0};
 
       shoppingCart = [...shoppingCart,productwithQuality]
 
@@ -81,6 +81,8 @@ function createProductCard(productData) {
   function closeModal() {
     modal.style.display = "none";
   }
+
+  console.log(shoppingCart)
 }
 getAPI();
 
