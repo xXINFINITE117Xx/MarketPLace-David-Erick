@@ -63,16 +63,16 @@ function createProductCard(productData) {
     price.textContent = "$" + productData.price;
 
     /*Add cart*/
-    const btnAddCart = document.querySelector(".add_to_cart");
-    btnAddCart.addEventListener("click", () => {
-      const existingProduct = shoppingCart.findIndex(
+    const addProduct = document.querySelector(".add_to_cart");
+    addProduct.addEventListener("click", () => {
+      const existingProductIndex = shoppingCart.findIndex(
         (item) => item.id === productData.id
       );
-
-      if (existingProduct !== -1) {
+      if (existingProductIndex !== -1) {
         Swal.fire("This product has already been added to the cart");
         return;
       }
+      Swal.fire("Product added to cart successfully");
 
       const productwithQuality = { ...productData, number_amount: 0 };
 
