@@ -5,7 +5,9 @@ const jewerely = document.querySelector(".Jewerely");
 const mens = document.querySelector(".Mens");
 const women = document.querySelector(".Women");
 let category = " ";
-let shoppingCart=localStorage.getItem("shoppingCart") ? JSON.parse(localStorage.getItem("shoppingCart")) : [];
+let shoppingCart = localStorage.getItem("shoppingCart")
+  ? JSON.parse(localStorage.getItem("shoppingCart"))
+  : [];
 function reloadWebsite() {
   location.reload();
 }
@@ -63,16 +65,18 @@ function createProductCard(productData) {
     /*Add cart*/
     const addProduct = document.querySelector(".add_to_cart");
     addProduct.addEventListener("click", () => {
-      const existingProduct = shoppingCart.find(item => item.id === productData.id);
-
-      if (existingProduct) {
-        Swal.fire ("This product has already been added to the cart")
-        return; 
+      const existingProductIndex = shoppingCart.findIndex(
+        (item) => item.id === productData.id
+      );
+      if (existingProductIndex !== -1) {
+        Swal.fire("This product has already been added to the cart");
+        return;
       }
+      Swal.fire("Product added to cart successfully");
 
-      const productwithQuality = {...productData, number_amount: 0};
+      const productwithQuality = { ...productData, number_amount: 0 };
 
-      shoppingCart = [...shoppingCart,productwithQuality]
+      shoppingCart = [...shoppingCart, productwithQuality];
 
       localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
     });
@@ -82,7 +86,7 @@ function createProductCard(productData) {
     modal.style.display = "none";
   }
 
-  console.log(shoppingCart)
+  console.log(shoppingCart);
 }
 getAPI();
 
