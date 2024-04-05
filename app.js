@@ -61,8 +61,9 @@ function createProductCard(productData) {
     price.textContent = "$" + productData.price;
 
     /*Add cart*/
-    const addProduct = document.querySelector(".add_to_cart");
-    addProduct.addEventListener("click", () => {
+    const btnAddCart = document.querySelector(".add_to_cart");
+    btnAddCart.textContent = 'Add to the cart'
+    btnAddCart.addEventListener("click", () => {
       const existingProduct = shoppingCart.find(item => item.id === productData.id);
 
       if (existingProduct) {
