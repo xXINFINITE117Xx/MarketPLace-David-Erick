@@ -5,6 +5,7 @@ const jewerely = document.querySelector(".Jewerely");
 const mens = document.querySelector(".Mens");
 const women = document.querySelector(".Women");
 let category = " ";
+let shoppingCart=[];
 function reloadWebsite() {
   location.reload();
 }
@@ -54,8 +55,27 @@ function createProductCard(productData) {
     img.alt = productData.title;
     const description = document.querySelector(".description");
     description.textContent = productData.description;
+    const category = document.querySelector(".category");
+    category.textContent = productData.category;
     const price = document.querySelector(".price");
     price.textContent = "$" + productData.price;
+
+    /*Add cart*/
+    const addProduct = document.querySelector(".add_to_cart");
+    addProduct.addEventListener("click", () => {
+      const existingProduct = shoppingCart.find(item => item.id === productData.id);
+
+      if (existingProduct) {
+        Swal.fire ("This product has already been added to the cart")
+        return; 
+      }
+
+      const productwithQuality = {...productData, quantity: 0};
+
+      shoppingCart = [...shoppingCart,productwithQuality]
+
+      localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
+    });
   }
 
   function closeModal() {
@@ -117,8 +137,10 @@ women.addEventListener("click", () => {
 });
 
 // Función para fijar el footer y la imagen .separator2 al hacer clic en el botón
-document.getElementById('stopMoving').addEventListener('click', function(event) {
-  event.preventDefault(); // Evita que el enlace recargue la página
-  document.querySelector('footer').classList.add('fixed-footer');
-  document.querySelector('.separator2').classList.add('fixed-footer');
-});
+document
+  .getElementById("stopMoving")
+  .addEventListener("click", function (event) {
+    event.preventDefault(); // Evita que el enlace recargue la página
+    document.querySelector("footer").classList.add("fixed-footer");
+    document.querySelector(".separator2").classList.add("fixed-footer");
+  });

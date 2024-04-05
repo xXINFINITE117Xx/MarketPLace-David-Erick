@@ -11,14 +11,16 @@ body {
   font-family: 'Nunito', sans-serif;
   font-size: 0.87rem;
 }
-header{
+
+header {
   position: fixed;
   top: 0;
-  left:0;
+  left: 0;
   padding-top: 14px;
   z-index: 4;
   background-color: #1E8AD9;
 }
+
 header,
 main {
   width: 100%;
@@ -27,7 +29,8 @@ main {
   flex-direction: column;
   align-items: center;
 }
-main{
+
+main {
   margin-top: 9.5rem;
 }
 
@@ -63,13 +66,13 @@ main{
 
 .menu {
   position: fixed;
-    top: 26%;
-    left: 13.7%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    background-color: #0e6cafce;
-    padding: 1rem 0 1rem 0;
-    display: none;
+  top: 26%;
+  left: 13.7%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: #0e6cafce;
+  padding: 1rem 0 1rem 0;
+  display: none;
 }
 
 .menu a {
@@ -126,7 +129,7 @@ main{
   height: auto;
 }
 
-.container_category{
+.container_category {
   width: 100%;
   height: 18%;
   display: flex;
@@ -238,7 +241,7 @@ h1 {
   text-align: center;
 }
 
-.container_product>.container_tittle>h2{
+.container_product>.container_tittle>h2 {
   max-width: 100%;
   max-height: 80%;
   overflow-x: hidden;
@@ -269,71 +272,14 @@ footer {
   margin-top: 0.4rem;
 }
 
-.modal{
-  width: 90%;
-  height: 100%;
-  background-color:#f16e1ceb;
-  opacity: 98%;
-  color: #D9D8D7;
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 2rem;
-  position: fixed;
-  top: 0;
-  left: 0%;
-  z-index: 5;
-  padding: 5%;
-}
-
-.image{
-  width: 10rem;
-  height: auto;
-}
-
-.description{
-  font-size: 20px;
-  margin-bottom: 1rem;
-}
-
-.close{
-  width: auto;
-  height: auto;
-  font-size: 25px;
-  border-style: none;
-  background-color: #46A6EA;
-  position: relative;
-  top: 2%;
-  left: 40%;
-  color: #fff;
-  padding: 0.5rem;
-  border-radius: 25%;margin-bottom: 2rem;
-}
-
-.price{
-  font-size: 25px;
-  color: #0e6caf;
-}
-
-.add_to_cart{
-  width: auto;
-  height: auto;
-  font-size: 25px;
-  border-style: none;
-  background-color: #46A6EA;
-  color: #fff;
-  padding: 1rem;
-  border-radius: 25px;
-}
 
 footer {
   position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    padding: 10px 0;
-    z-index: 3;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 3;
 }
 
 .container-icons {
@@ -347,13 +293,13 @@ footer {
 
 .separator2 {
   position: fixed;
-    left: 0;
-    top: 53rem;
-    transform: translateX(0%);
-    width: 100%;
-    height: auto;
-    z-index: 3;
-    background-color: #1E8AD9;
+  left: 0;
+  top: 53rem;
+  transform: translateX(0%);
+  width: 100%;
+  height: auto;
+  z-index: 3;
+  background-color: #1E8AD9;
 
 }
 
