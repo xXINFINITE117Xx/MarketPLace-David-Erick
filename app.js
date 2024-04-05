@@ -5,6 +5,7 @@ const jewerely = document.querySelector(".Jewerely");
 const mens = document.querySelector(".Mens");
 const women = document.querySelector(".Women");
 let category = " ";
+let shoppingCart=[];
 function reloadWebsite() {
   location.reload();
 }
@@ -60,20 +61,18 @@ function createProductCard(productData) {
     price.textContent = "$" + productData.price;
 
     /*Add cart*/
-    const addProduct = document.createElement("button");
-    addProduct.textContent = "Add to the cart";
-    addProduct.id = "add_to_cart";
+    const addProduct = document.querySelector(".add_to_cart");
     addProduct.addEventListener("click", () => {
-      const ExistingProduct = shoppingCart.find(item => item.id === product.id);
+      const existingProduct = shoppingCart.find(item => item.id === productData.id);
 
-      if (ExistingProduct) {
+      if (existingProduct) {
         Swal.fire ("This product has already been added to the cart")
-        return;
+        return; 
       }
 
-      const productwithQuality = {...product, quantity: 0};
+      const productwithQuality = {...productData, quantity: 0};
 
-      shoppingCart = [...shoppingCart, ...productwithQuality]
+      shoppingCart = [...shoppingCart,productwithQuality]
 
       localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
     });
